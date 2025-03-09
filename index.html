@@ -9,7 +9,29 @@
 </head>
 <body>
     <h1>My Library</h1>
-    <button>New Book</button>
+    <!-- <dialog> -->
+        <form>
+            <label for="title">
+                Title:
+                <input type="text" id="title" name="title">
+            </label>
+            <label for="author">
+                Author:
+                <input type="text" id="author" name="author">
+            </label>
+            <label for="pages">
+                Pages:
+                <input type="number" id="pages" name="pages">
+            </label>
+            <label for="have-read">
+                Have Read:
+                <input type="checkbox" id="have-read" name="have-read">
+            </label>
+            <button class="cancel-btn">Cancel</button>
+            <button class="add-btn">Add</button>
+        </form>
+    <!-- </dialog> -->
+    <button class="new-book">New Book</button>      
     <div class="library"></div>
 </body>
 </html>

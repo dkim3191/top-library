@@ -52,3 +52,11 @@ function displayBooks(books) {
 }
 
 displayBooks(books);
+
+
+
+// Dialog
+const showBtn = document.querySelector(".new-book");
+const dialog = document.querySelector("dialog");
+const addBtn = document.querySelector(".add-btn");
+const cancelBtn = document.querySelector(".cancel-btn");
