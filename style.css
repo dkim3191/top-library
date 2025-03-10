@@ -24,12 +24,22 @@ h1 {
 
 button {
     display: block;
-    background-color: skyblue;
-    border: 2px solid darkblue;
-    color: darkblue;
     padding: 15px 20px;
     border-radius: 10px;
     margin: 0 auto 15px;
+}
+
+.standard-button {
+    background-color: skyblue;
+    border: 2px solid darkblue;
+    color: darkblue;
+}
+
+.remove-button {
+    background-color: rgb(255, 195, 195);
+    border: 2px solid rgb(136, 0, 0);
+    color: rgb(136, 0, 0);
+    margin-top: 15px;
 }
 
 button:hover {
@@ -65,7 +75,7 @@ button:hover {
 
 .pages {
     color: var(--color3);
-    position: absolute; 
+    position: absolute;
     bottom: 120px;
     left: 0;
     right: 0;
@@ -74,16 +84,24 @@ button:hover {
 
 .have_read {
     color: var(--color3);
-    position: absolute; 
+    position: absolute;
     bottom: 100px;
     left: 0;
     right: 0;
     margin-inline: auto;
 }
 
-.id {
-    color: var(--color4);
-    font-size: 0.9rem;
-    position: absolute;
-    bottom: 10px;
+dialog {
+    margin: auto;
+    padding: 30px;
+}
+
+label {
+    display: block;
+    margin: 10px;
+}
+
+form button {
+    display: inline;
+    margin: 20px;
 }

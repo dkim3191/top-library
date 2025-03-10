@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <h1>My Library</h1>
-    <!-- <dialog> -->
+    <dialog>
         <form>
             <label for="title">
                 Title:
@@ -27,11 +29,12 @@
                 Have Read:
                 <input type="checkbox" id="have-read" name="have-read">
             </label>
-            <button class="cancel-btn">Cancel</button>
-            <button class="add-btn">Add</button>
+            <button class="cancel-btn standard-button" formmethod="dialog">Cancel</button>
+            <button class="add-btn standard-button">Add</button>
         </form>
-    <!-- </dialog> -->
-    <button class="new-book">New Book</button>      
+    </dialog>
+    <button class="new-book standard-button">New Book</button>
     <div class="library"></div>
 </body>
+
 </html>
