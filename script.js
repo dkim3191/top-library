@@ -8,6 +8,14 @@ function Book(title, author, pages, have_read) {
     this.id = crypto.randomUUID();
 }
 
+Book.prototype.read = function () {
+    if (this.have_read == "Yes") {
+        this.have_read = "No";
+    } else {
+        this.have_read = "Yes";
+    }
+};
+
 function createBook(title, author, pages, have_read) {
     const book = new Book(title, author, pages, have_read);
     books.push(book);
@@ -30,6 +38,7 @@ function displayBooks(books) {
         const pages = document.createElement("p");
         const have_read = document.createElement("p");
         const removeBtn = document.createElement("button");
+        const readBtn = document.createElement("button");
 
         bookWrapper.className = "book-wrapper";
         div.className = "book";
@@ -39,12 +48,14 @@ function displayBooks(books) {
         have_read.className = "have_read";
         removeBtn.className = "remove-button";
         removeBtn.setAttribute("data-book-id", book.id);
+        readBtn.className = "read-button";
 
         title.textContent = book.title;
         author.textContent = book.author;
         pages.textContent = book.pages + " pages";
         have_read.textContent = "Have read: " + book.have_read;
         removeBtn.textContent = "Remove";
+        readBtn.textContent = "I've read this";
 
         removeBtn.addEventListener("click", (e) => {
             const bookID = e.target.dataset.bookId;
@@ -56,6 +67,11 @@ function displayBooks(books) {
             }
         });
 
+        readBtn.addEventListener("click", () => {
+            book.read();
+            displayBooks(books);
+        });
+
         library.appendChild(bookWrapper);
         bookWrapper.appendChild(div);
         div.appendChild(title);
@@ -63,6 +79,7 @@ function displayBooks(books) {
         div.appendChild(pages);
         div.appendChild(have_read);
         bookWrapper.appendChild(removeBtn);
+        bookWrapper.appendChild(readBtn);
     }
 }
 
